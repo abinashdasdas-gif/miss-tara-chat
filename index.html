@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talk to Miss Tara</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: sans-serif; background: linear-gradient(135deg, #e8f5e9, #c8e6c9); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; }
+    .logo { font-size: 60px; margin-bottom: 16px; }
+    h1 { color: #2e7d32; font-size: 2rem; margin-bottom: 10px; }
+    p { color: #555; font-size: 1.1rem; max-width: 400px; }
+    .hint { margin-top: 30px; color: #888; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="logo">&#127822;</div>
+  <h1>Hi! I am Miss Tara</h1>
+  <p>Your friendly AI learning helper for kids aged 6 to 12!</p>
+  <p class="hint">Click the orange button below to start chatting!</p>
+  <script type="text/javascript">
+    (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '6a1e951f1bd221f955f429d5' },
+          url: 'https://general-runtime.voiceflow.com',
+          voice: { url: 'https://runtime-api.voiceflow.com' }
+        });
+      }
+      v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
+      v.type = 'text/javascript';
+      s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+</body>
+</html>
